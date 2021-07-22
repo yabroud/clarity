@@ -1,50 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Stripe Checkout Sample</title>
-    <meta name="description" content="A demo of Stripe client-only Checkout" />
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/global.css" />
-    <script src="https://js.stripe.com/v3/"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <title>Stripe Checkout Sample</title>
+  <meta name="description" content="A demo of Stripe client-only Checkout" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <body>
-    <div class="sr-root">
-      <div class="sr-main">
-        <header class="sr-header">
-          <a href="./" class="sr-header__logo"></a>
-        </header>
-        <div class="sr-payment-summary completed-view">
-          <h1>Your test payment succeeded</h1>
-          <h4>Checkout Session ID: <span id="session"></span></h4>
-        </div>
-      <div class="sr-content">
-        <div class="pasha-image-stack">
-          <img
-            src="https://picsum.photos/280/320?random=1"
-            width="140"
-            height="160"
-          />
-          <img
-            src="https://picsum.photos/280/320?random=2"
-            width="140"
-            height="160"
-          />
-          <img
-            src="https://picsum.photos/280/320?random=3"
-            width="140"
-            height="160"
-          />
-          <img
-            src="https://picsum.photos/280/320?random=4"
-            width="140"
-            height="160"
-          />
-        </div>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css1/normalize.css" />
+  <link rel="stylesheet" href="css1/global.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="ajax-request.js" defer></script>
+
+</head>
+
+<body>
+  <div class="togethere-background"></div>
+  <div class="sr-root">
+    <div class="sr-main">
+      <header class="sr-header">
+        <a href="./">
+          <div class="sr-header__logo"></div>
+        </a> 
+      </header>
+      <div class="sr-payment-summary completed-view">
+        <h1>Your test payment succeeded</h1>
+        <h4>Checkout Session ID: <span id="session"></span></h4>
       </div>
+
+      <h1 style="text-align: center;">Payments List</h1>
+
+          <div style="text-align: center;" id="checkoutSection-list"></div>
     </div>
     <script>
       var urlParams = new URLSearchParams(window.location.search);
@@ -54,6 +46,10 @@
           "session_id"
         );
       }
+
+
+ 
     </script>
-  </body>
+</body>
+
 </html>
