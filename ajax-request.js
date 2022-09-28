@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $.ajax({
-        url: "https://frenchless.herokuapp.com/checkout",
+        url: "https://nassiftech.com/frenchie/checkout",
         beforeSend: function (xhr) {
 
             let loading = `<img
